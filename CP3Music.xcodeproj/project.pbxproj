@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		977BE4042402BEA700043AB4 /* CP3Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977BE3FA2402BEA700043AB4 /* CP3Music.framework */; };
-		977BE4092402BEA700043AB4 /* CP3MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4082402BEA700043AB4 /* CP3MusicTests.swift */; };
 		977BE40B2402BEA700043AB4 /* CP3Music.h in Headers */ = {isa = PBXBuildFile; fileRef = 977BE3FD2402BEA700043AB4 /* CP3Music.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		977BE4152402BEB200043AB4 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4142402BEB200043AB4 /* Key.swift */; };
+		977BE41B2402C08C00043AB4 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE41A2402C08C00043AB4 /* Interval.swift */; };
+		977BE41D2402C52000043AB4 /* Accidental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE41C2402C52000043AB4 /* Accidental.swift */; };
+		977BE41F2402CE5E00043AB4 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE41E2402CE5E00043AB4 /* Scale.swift */; };
+		977BE4212402CE6C00043AB4 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4202402CE6C00043AB4 /* Pitch.swift */; };
+		977BE4242402D90700043AB4 /* Modulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4232402D90700043AB4 /* Modulo.swift */; };
+		97A7E26B2402F54200B5CFE3 /* CP3MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4082402BEA700043AB4 /* CP3MusicTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		977BE4032402BEA700043AB4 /* CP3MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CP3MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BE4082402BEA700043AB4 /* CP3MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CP3MusicTests.swift; sourceTree = "<group>"; };
 		977BE40A2402BEA700043AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977BE4142402BEB200043AB4 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		977BE41A2402C08C00043AB4 /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		977BE41C2402C52000043AB4 /* Accidental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accidental.swift; sourceTree = "<group>"; };
+		977BE41E2402CE5E00043AB4 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		977BE4202402CE6C00043AB4 /* Pitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
+		977BE4232402D90700043AB4 /* Modulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modulo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				977BE3FD2402BEA700043AB4 /* CP3Music.h */,
+				977BE4142402BEB200043AB4 /* Key.swift */,
+				977BE41C2402C52000043AB4 /* Accidental.swift */,
+				977BE41A2402C08C00043AB4 /* Interval.swift */,
+				977BE41E2402CE5E00043AB4 /* Scale.swift */,
+				977BE4202402CE6C00043AB4 /* Pitch.swift */,
+				977BE4232402D90700043AB4 /* Modulo.swift */,
+				977BE4082402BEA700043AB4 /* CP3MusicTests.swift */,
 				977BE3FE2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3Music;
@@ -80,7 +99,6 @@
 		977BE4072402BEA700043AB4 /* CP3MusicTests */ = {
 			isa = PBXGroup;
 			children = (
-				977BE4082402BEA700043AB4 /* CP3MusicTests.swift */,
 				977BE40A2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3MusicTests;
@@ -148,6 +166,7 @@
 				TargetAttributes = {
 					977BE3F92402BEA700043AB4 = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
 					};
 					977BE4022402BEA700043AB4 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -195,6 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977BE4212402CE6C00043AB4 /* Pitch.swift in Sources */,
+				977BE41D2402C52000043AB4 /* Accidental.swift in Sources */,
+				977BE41B2402C08C00043AB4 /* Interval.swift in Sources */,
+				977BE41F2402CE5E00043AB4 /* Scale.swift in Sources */,
+				977BE4152402BEB200043AB4 /* Key.swift in Sources */,
+				977BE4242402D90700043AB4 /* Modulo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				977BE4092402BEA700043AB4 /* CP3MusicTests.swift in Sources */,
+				97A7E26B2402F54200B5CFE3 /* CP3MusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +365,7 @@
 		977BE40F2402BEA700043AB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5GWBH83EBX;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.cp3.CP3Music;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		977BE4102402BEA700043AB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5GWBH83EBX;
@@ -388,6 +416,7 @@
 		977BE4122402BEA700043AB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWBH83EBX;
 				INFOPLIST_FILE = CP3MusicTests/Info.plist;
@@ -406,6 +435,7 @@
 		977BE4132402BEA700043AB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWBH83EBX;
 				INFOPLIST_FILE = CP3MusicTests/Info.plist;
