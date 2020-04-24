@@ -21,7 +21,7 @@ public struct Key {
 
 extension Key {
     
-    enum Root: Int, CaseIterable, CustomStringConvertible {
+    public enum Root: Int, CaseIterable, CustomStringConvertible {
         case c = 0
         case d = 2
         case e = 4
@@ -30,7 +30,7 @@ extension Key {
         case a = 9
         case b = 11
         
-        var description: String {
+        public var description: String {
             switch self {
             case .c:
                 return "C"

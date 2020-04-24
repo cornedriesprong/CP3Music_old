@@ -26,7 +26,7 @@ public enum Interval: Int {
 
 extension Interval: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         switch self {
         case .p0:
             return "Unison"

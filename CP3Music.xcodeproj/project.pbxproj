@@ -90,7 +90,6 @@
 				977BE41E2402CE5E00043AB4 /* Scale.swift */,
 				977BE4202402CE6C00043AB4 /* Pitch.swift */,
 				977BE4232402D90700043AB4 /* Modulo.swift */,
-				977BE4082402BEA700043AB4 /* CP3MusicTests.swift */,
 				977BE3FE2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3Music;
@@ -99,6 +98,7 @@
 		977BE4072402BEA700043AB4 /* CP3MusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				977BE4082402BEA700043AB4 /* CP3MusicTests.swift */,
 				977BE40A2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3MusicTests;

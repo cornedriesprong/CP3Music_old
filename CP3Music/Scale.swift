@@ -62,7 +62,7 @@ public struct Scale {
 
 extension Scale {
     
-    enum Quality: Int, CaseIterable, Codable {
+    public enum Quality: Int, CaseIterable, Codable {
         case major,
         minor,
         pentatonic,
@@ -72,7 +72,7 @@ extension Scale {
         mixolydian,
         locrian
         
-        var intervals: [Interval] {
+        public var intervals: [Interval] {
             switch self {
             case .major:
                 return [.p0, .M2, .M3, .p4, .p5, .M6, .M7]
@@ -93,7 +93,7 @@ extension Scale {
             }
         }
         
-        var description: String {
+        public var description: String {
             switch self {
             case .major:
                 return "Ionian (Major)"
@@ -118,14 +118,14 @@ extension Scale {
 
 extension Scale: Equatable {
     
-    static func == (lhs: Scale, rhs: Scale) -> Bool {
+    public static func == (lhs: Scale, rhs: Scale) -> Bool {
         lhs.pitches == rhs.pitches
     }
 }
 
 extension Scale: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         return "\(key.root.description)\(key.accidental.description)\(quality.description)"
     }
 }

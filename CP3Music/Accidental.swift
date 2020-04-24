@@ -16,7 +16,7 @@ public enum Accidental: Int, CaseIterable {
 
 extension Accidental: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         switch self {
         case .flat:
             return "♭"
