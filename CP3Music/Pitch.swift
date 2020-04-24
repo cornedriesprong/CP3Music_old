@@ -8,7 +8,28 @@
 
 import Foundation
 
-struct Pitch {
+public struct Pitch {
+    
+    var midiNoteNumber: Int
+    
+    var octave: Int {
+        return Int(floor(Float(midiNoteNumber) / 12))
+    }
+    
+    var `class`: Class! {
+        return Class(rawValue: midiNoteNumber % 12)
+    }
+    
+    init(midiNoteNumber: Int) {
+        self.midiNoteNumber = midiNoteNumber
+    }
+    
+    init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int) {
+        self.midiNoteNumber = `class`.rawValue + accidental.rawValue + octave * 12
+    }
+}
+
+extension Pitch {
     
     enum Class: Int, CustomStringConvertible {
         case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
@@ -41,23 +62,5 @@ struct Pitch {
                 return "B"
             }
         }
-    }
-    
-    var midiNoteNumber: Int
-    
-    var octave: Int {
-        return Int(floor(Float(midiNoteNumber) / 12))
-    }
-    
-    var `class`: Class! {
-        return Class(rawValue: midiNoteNumber % 12)
-    }
-    
-    init(midiNoteNumber: Int) {
-        self.midiNoteNumber = midiNoteNumber
-    }
-    
-    init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int) {
-        self.midiNoteNumber = `class`.rawValue + accidental.rawValue + octave * 12
     }
 }

@@ -8,12 +8,7 @@
 
 import Foundation
 
-// TODO:
-// transpose
-// pitches in key + scale
-// parallel/relative keys
-
-struct Key {
+public struct Key {
     
     var root: Root
     var accidental: Accidental

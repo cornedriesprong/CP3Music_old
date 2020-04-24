@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Scale {
+public struct Scale {
     
     let key: Key
     let quality: Scale.Quality

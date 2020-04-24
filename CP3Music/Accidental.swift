@@ -8,28 +8,22 @@
 
 import Foundation
 
-enum Accidental: Int, CaseIterable {
-//    case doubleFlat = -2
+public enum Accidental: Int, CaseIterable {
     case flat = -1
     case natural = 0
     case sharp = 1
-//    case doubleSharp = 2
 }
 
 extension Accidental: CustomStringConvertible {
     
     var description: String {
         switch self {
-//        case .doubleFlat:
-//            return "♭♭"
         case .flat:
             return "♭"
         case .natural:
             return "♮"
         case .sharp:
             return "♯"
-//        case .doubleSharp:
-//            return "♯♯"
         }
     }
 }
