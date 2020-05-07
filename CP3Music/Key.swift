@@ -13,16 +13,20 @@ public struct Key {
     var root: Root
     var accidental: Accidental
     
-    public init(pitchNumber: Int) {
-        let modPitchNumber = pitchNumber % 12
+    public init(midiNoteNumber: Int) {
+        let modMidiNoteNumber = midiNoteNumber % 12
         let root = Root.allCases
             .sorted(by: { $0.rawValue > $1.rawValue })
-            .first(where: { $0.rawValue <= modPitchNumber })!
-        let accidental: Accidental = modPitchNumber > root.rawValue ? .sharp : .natural
+            .first(where: { $0.rawValue <= modMidiNoteNumber })!
+        let accidental: Accidental = modMidiNoteNumber > root.rawValue ? .sharp : .natural
         self.init(root, accidental)
     }
     
-    init(_ root: Root, _ accidental: Accidental = .natural) {
+    public init(pitch: Pitch) {
+        self.init(midiNoteNumber: pitch.midiNoteNumber)
+    }
+    
+    public init(_ root: Root, _ accidental: Accidental = .natural) {
         self.root = root
         self.accidental = accidental
     }

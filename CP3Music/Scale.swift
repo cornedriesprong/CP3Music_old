@@ -54,7 +54,7 @@ public struct Scale {
         }
     }
     
-    init(_ key: Key, _ quality: Scale.Quality) {
+    public init(_ key: Key, _ quality: Scale.Quality) {
         self.key = key
         self.quality = quality
     }

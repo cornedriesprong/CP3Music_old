@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97245E5B246448430038A2AA /* Degree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97245E5A246448430038A2AA /* Degree.swift */; };
 		977BE4042402BEA700043AB4 /* CP3Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977BE3FA2402BEA700043AB4 /* CP3Music.framework */; };
 		977BE40B2402BEA700043AB4 /* CP3Music.h in Headers */ = {isa = PBXBuildFile; fileRef = 977BE3FD2402BEA700043AB4 /* CP3Music.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		977BE4152402BEB200043AB4 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4142402BEB200043AB4 /* Key.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97245E5A246448430038A2AA /* Degree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Degree.swift; sourceTree = "<group>"; };
 		977BE3FA2402BEA700043AB4 /* CP3Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CP3Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BE3FD2402BEA700043AB4 /* CP3Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CP3Music.h; sourceTree = "<group>"; };
 		977BE3FE2402BEA700043AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				977BE41C2402C52000043AB4 /* Accidental.swift */,
 				977BE41A2402C08C00043AB4 /* Interval.swift */,
 				977BE41E2402CE5E00043AB4 /* Scale.swift */,
+				97245E5A246448430038A2AA /* Degree.swift */,
 				977BE4202402CE6C00043AB4 /* Pitch.swift */,
 				977BE4232402D90700043AB4 /* Modulo.swift */,
 				977BE3FE2402BEA700043AB4 /* Info.plist */,
@@ -217,6 +220,7 @@
 				977BE4212402CE6C00043AB4 /* Pitch.swift in Sources */,
 				977BE41D2402C52000043AB4 /* Accidental.swift in Sources */,
 				977BE41B2402C08C00043AB4 /* Interval.swift in Sources */,
+				97245E5B246448430038A2AA /* Degree.swift in Sources */,
 				977BE41F2402CE5E00043AB4 /* Scale.swift in Sources */,
 				977BE4152402BEB200043AB4 /* Key.swift in Sources */,
 				977BE4242402D90700043AB4 /* Modulo.swift in Sources */,

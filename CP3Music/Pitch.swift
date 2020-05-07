@@ -20,7 +20,7 @@ public struct Pitch {
         return Class(rawValue: midiNoteNumber % 12)
     }
     
-    init(midiNoteNumber: Int) {
+    public init(midiNoteNumber: Int) {
         self.midiNoteNumber = midiNoteNumber
     }
     
