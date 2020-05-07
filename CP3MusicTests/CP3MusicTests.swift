@@ -51,4 +51,52 @@ class CP3MusicTests: XCTestCase {
         let aMixolydianPitches: [Pitch.Class] = [.f, .g, .a, .as, .c, .d, .ds]
         XCTAssertEqual(aMixolydianScale.pitches, aMixolydianPitches)
     }
+    
+    func testPitchNumbers() {
+        
+        // A
+        let lowA = Key(pitchNumber: 21)
+        XCTAssertEqual(lowA.root, Key.Root.a)
+        XCTAssertEqual(lowA.accidental, Accidental.natural)
+        
+        // C
+        let c = Key(pitchNumber: 60)
+        XCTAssertEqual(c.root, Key.Root.c)
+        XCTAssertEqual(c.accidental, Accidental.natural)
+        
+        // C#
+        let cSharp = Key(pitchNumber: 61)
+        XCTAssertEqual(cSharp.root, Key.Root.c)
+        XCTAssertEqual(cSharp.accidental, Accidental.sharp)
+        
+        // D
+        let d = Key(pitchNumber: 62)
+        XCTAssertEqual(d.root, Key.Root.d)
+        XCTAssertEqual(d.accidental, Accidental.natural)
+        
+        // D#
+        let dSharp = Key(pitchNumber: 63)
+        XCTAssertEqual(dSharp.root, Key.Root.d)
+        XCTAssertEqual(dSharp.accidental, Accidental.sharp)
+        
+        // A
+        let a = Key(pitchNumber: 69)
+        XCTAssertEqual(a.root, Key.Root.a)
+        XCTAssertEqual(a.accidental, Accidental.natural)
+        
+        // A#
+        let aSharp = Key(pitchNumber: 70)
+        XCTAssertEqual(aSharp.root, Key.Root.a)
+        XCTAssertEqual(aSharp.accidental, Accidental.sharp)
+        
+        // B
+        let b = Key(pitchNumber: 71)
+        XCTAssertEqual(b.root, Key.Root.b)
+        XCTAssertEqual(b.accidental, Accidental.natural)
+        
+        // C
+        let highC = Key(pitchNumber: 108)
+        XCTAssertEqual(highC.root, Key.Root.c)
+        XCTAssertEqual(highC.accidental, Accidental.natural)
+    }
 }
