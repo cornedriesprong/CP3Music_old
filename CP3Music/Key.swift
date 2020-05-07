@@ -13,7 +13,7 @@ public struct Key {
     var root: Root
     var accidental: Accidental
     
-    init(pitchNumber: Int) {
+    public init(pitchNumber: Int) {
         let modPitchNumber = pitchNumber % 12
         let root = Root.allCases
             .sorted(by: { $0.rawValue > $1.rawValue })
@@ -57,5 +57,12 @@ extension Key {
                 return "B"
             }
         }
+    }
+}
+
+extension Key: CustomStringConvertible {
+
+    public var description: String {
+        return "\(root.description)\(accidental.description)"
     }
 }
