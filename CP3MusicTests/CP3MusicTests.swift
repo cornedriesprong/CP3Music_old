@@ -55,48 +55,60 @@ class CP3MusicTests: XCTestCase {
     func testPitchNumbers() {
         
         // A
-        let lowA = Key(pitchNumber: 21)
+        let lowA = Key(midiNoteNumber: 21)
         XCTAssertEqual(lowA.root, Key.Root.a)
         XCTAssertEqual(lowA.accidental, Accidental.natural)
         
         // C
-        let c = Key(pitchNumber: 60)
+        let c = Key(midiNoteNumber: 60)
         XCTAssertEqual(c.root, Key.Root.c)
         XCTAssertEqual(c.accidental, Accidental.natural)
         
         // C#
-        let cSharp = Key(pitchNumber: 61)
+        let cSharp = Key(midiNoteNumber: 61)
         XCTAssertEqual(cSharp.root, Key.Root.c)
         XCTAssertEqual(cSharp.accidental, Accidental.sharp)
         
         // D
-        let d = Key(pitchNumber: 62)
+        let d = Key(midiNoteNumber: 62)
         XCTAssertEqual(d.root, Key.Root.d)
         XCTAssertEqual(d.accidental, Accidental.natural)
         
         // D#
-        let dSharp = Key(pitchNumber: 63)
+        let dSharp = Key(midiNoteNumber: 63)
         XCTAssertEqual(dSharp.root, Key.Root.d)
         XCTAssertEqual(dSharp.accidental, Accidental.sharp)
         
         // A
-        let a = Key(pitchNumber: 69)
+        let a = Key(midiNoteNumber: 69)
         XCTAssertEqual(a.root, Key.Root.a)
         XCTAssertEqual(a.accidental, Accidental.natural)
         
         // A#
-        let aSharp = Key(pitchNumber: 70)
+        let aSharp = Key(midiNoteNumber: 70)
         XCTAssertEqual(aSharp.root, Key.Root.a)
         XCTAssertEqual(aSharp.accidental, Accidental.sharp)
         
         // B
-        let b = Key(pitchNumber: 71)
+        let b = Key(midiNoteNumber: 71)
         XCTAssertEqual(b.root, Key.Root.b)
         XCTAssertEqual(b.accidental, Accidental.natural)
         
         // C
-        let highC = Key(pitchNumber: 108)
+        let highC = Key(midiNoteNumber: 108)
         XCTAssertEqual(highC.root, Key.Root.c)
         XCTAssertEqual(highC.accidental, Accidental.natural)
+    }
+    
+    func testScaleDegrees() {
+        
+        let a = Pitch(.a, .natural, 2)
+        let aMajor = Scale(Key(.a), .major)
+        XCTAssertEqual(Degree(of: a, in: aMajor), Degree.i)
+        
+//        let aSharp = Pitch(.a, .sharp, 2)
+        let cSharpMinor = Scale(Key(.c, .sharp), .minor)
+        print(Degree(of: a, in: cSharpMinor).description)
+//        XCTAssertEqual(degree, Degree.vii)
     }
 }
