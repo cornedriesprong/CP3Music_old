@@ -63,6 +63,8 @@ extension Key {
 extension Key: CustomStringConvertible {
 
     public var description: String {
-        return "\(root.description)\(accidental.description)"
+        
+        let accidentalString = accidental != .natural ? accidental.description : ""
+        return "\(root.description)\(accidentalString)"
     }
 }
