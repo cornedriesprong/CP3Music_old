@@ -17,6 +17,7 @@
 		977BE4212402CE6C00043AB4 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4202402CE6C00043AB4 /* Pitch.swift */; };
 		977BE4242402D90700043AB4 /* Modulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4232402D90700043AB4 /* Modulo.swift */; };
 		97A7E26B2402F54200B5CFE3 /* CP3MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4082402BEA700043AB4 /* CP3MusicTests.swift */; };
+		97E08A5C246567C100319031 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E08A5B246567C100319031 /* Chord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		977BE41E2402CE5E00043AB4 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		977BE4202402CE6C00043AB4 /* Pitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		977BE4232402D90700043AB4 /* Modulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modulo.swift; sourceTree = "<group>"; };
+		97E08A5B246567C100319031 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +93,9 @@
 				977BE41A2402C08C00043AB4 /* Interval.swift */,
 				977BE41E2402CE5E00043AB4 /* Scale.swift */,
 				97245E5A246448430038A2AA /* Degree.swift */,
+				97E08A5B246567C100319031 /* Chord.swift */,
 				977BE4202402CE6C00043AB4 /* Pitch.swift */,
-				977BE4232402D90700043AB4 /* Modulo.swift */,
+				97E08A5A2465663E00319031 /* Helpers */,
 				977BE3FE2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3Music;
@@ -105,6 +108,14 @@
 				977BE40A2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3MusicTests;
+			sourceTree = "<group>";
+		};
+		97E08A5A2465663E00319031 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				977BE4232402D90700043AB4 /* Modulo.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				97245E5B246448430038A2AA /* Degree.swift in Sources */,
 				977BE41F2402CE5E00043AB4 /* Scale.swift in Sources */,
 				977BE4152402BEB200043AB4 /* Key.swift in Sources */,
+				97E08A5C246567C100319031 /* Chord.swift in Sources */,
 				977BE4242402D90700043AB4 /* Modulo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
