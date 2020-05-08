@@ -111,4 +111,56 @@ class CP3MusicTests: XCTestCase {
         print(Degree(of: a, in: cSharpMinor).description)
 //        XCTAssertEqual(degree, Degree.vii)
     }
+    
+    func testInverseInterval() {
+        
+        XCTAssertEqual(Interval.p0.inverse(), .p8)
+        XCTAssertEqual(Interval.p5.inverse(), .p4)
+        XCTAssertEqual(Interval.p4.inverse(), .p5)
+        XCTAssertEqual(Interval.m3.inverse(), .M6)
+        XCTAssertEqual(Interval.M6.inverse(), .m3)
+        XCTAssertEqual(Interval.M7.inverse(), .m2)
+        XCTAssertEqual(Interval.p12.inverse(), .p5)
+        XCTAssertEqual(Interval.a15.inverse(), .m9)
+    }
+    
+    func testInterval() {
+        
+        // perfect 4th/perfect 5th
+        let c = Pitch(.c, .natural, 3)
+        let g = Pitch(.g, .natural, 3)
+        XCTAssertEqual(g.interval(to: c), .p4)
+        XCTAssertEqual(c.interval(to: g), .p5)
+        
+        // major 3rd/minor 6th
+        let f = Pitch(.f, .natural, 3)
+        let a = Pitch(.a, .natural, 3)
+        XCTAssertEqual(f.interval(to: a), .M3)
+        XCTAssertEqual(a.interval(to: f), .m6)
+        
+        // minor 10th/major 6th
+        let gSharp = Pitch(.g, .sharp, 4)
+        let b = Pitch(.b, .natural, 5)
+        XCTAssertEqual(gSharp.interval(to: b), .m10)
+        XCTAssertEqual(b.interval(to: gSharp), .M6)
+    }
+    
+    func testChord() {
+        
+        // C major
+        let cMajor = Chord(pitches: [
+            Pitch(.c, .natural, 3),
+            Pitch(.e, .natural, 3),
+            Pitch(.g, .natural, 3)
+        ])!
+        XCTAssertEqual(cMajor.description, "CM")
+        
+        // D# minor
+        let dSharpMinor = Chord(pitches: [
+            Pitch(.d, .sharp, 3),
+            Pitch(.f, .sharp, 3),
+            Pitch(.a, .sharp, 4)
+        ])!
+        XCTAssertEqual(dSharpMinor.description, "D#m")
+    }
 }

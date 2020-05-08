@@ -11,23 +11,23 @@ import Foundation
 public struct Scale {
     
     let key: Key
-    let quality: Scale.Quality
+    let quality: Scale.Mode
     
     var pitches: [Pitch.Class] {
         
         return quality.intervals.compactMap { interval in
-            let raw = mod(key.root.rawValue + interval.rawValue + key.accidental.rawValue, 12)
-            return Pitch.Class(rawValue: raw)
+            let rawValue = mod(key.root.rawValue + interval.rawValue + key.accidental.rawValue, 12)
+            return Pitch.Class(rawValue: rawValue)
         }
     }
     
     var relative: [Scale] {
         
         // iterate over all qualities except current one
-        let qualities = Set(Scale.Quality.allCases).subtracting([quality])
+        let qualities = Set(Scale.Mode.allCases).subtracting([quality])
         var scales = [Scale]()
         
-        // find all the keys with the same pitches as the current one
+        // find all the keys with the exact same pitches as the current one
         for quality in qualities {
             for root in Key.Root.allCases {
                 for accidental in Accidental.allCases {
@@ -54,7 +54,7 @@ public struct Scale {
         }
     }
     
-    public init(_ key: Key, _ quality: Scale.Quality) {
+    public init(_ key: Key, _ quality: Scale.Mode) {
         self.key = key
         self.quality = quality
     }
@@ -62,7 +62,7 @@ public struct Scale {
 
 extension Scale {
     
-    public enum Quality: Int, CaseIterable, Codable {
+    public enum Mode: Int, CaseIterable, Codable {
         case major,
         minor,
         pentatonic,

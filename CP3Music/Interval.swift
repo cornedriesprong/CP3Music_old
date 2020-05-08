@@ -9,6 +9,7 @@
 import Foundation
 
 public enum Interval: Int {
+    // simple
     case p0 = 0
     case m2 = 1
     case M2 = 2
@@ -22,6 +23,30 @@ public enum Interval: Int {
     case m7 = 10
     case M7 = 11
     case p8 = 12
+    
+    // compound
+    case m9 = 13
+    case M9 = 14
+    case m10 = 15
+    case M10 = 16
+    case p11 = 17
+    case a11_d12 = 18
+    case p12 = 19
+    case m13 = 20
+    case M13 = 21
+    case m14 = 22
+    case M14 = 23
+    case P15 = 24
+    case a15 = 25
+    
+    func inverse() -> Interval {
+        
+        if self.rawValue <= 12 {
+            return Interval(rawValue: abs(self.rawValue - 12))!
+        } else {
+            return Interval(rawValue: abs(self.rawValue - 24))!
+        }
+    }
 }
 
 extension Interval: CustomStringConvertible {
@@ -54,6 +79,32 @@ extension Interval: CustomStringConvertible {
             return "Major sixth"
         case .p8:
             return "Perfect octave"
+        case .m9:
+            return "Minor ninth"
+        case .M9:
+            return "Major ninth"
+        case .m10:
+            return "Minor tenth"
+        case .M10:
+            return "Major tenth"
+        case .p11:
+            return "Perfect eleventh"
+        case .a11_d12:
+            return "Augmented eleventh/diminished twelfth"
+        case .p12:
+            return "Perfect twelfth"
+        case .m13:
+            return "Minor thirteenth"
+        case .M13:
+            return "Major thirteenth"
+        case .m14:
+            return "Minor fourteenth"
+        case .M14:
+            return "Major fourteenth"
+        case .P15:
+            return "Perfect fifteenth"
+        case .a15:
+            return "Augmented fifteenth"
         }
     }
 }

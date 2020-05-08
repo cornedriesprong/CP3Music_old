@@ -9,8 +9,9 @@
 import Foundation
 
 public enum Degree: Int, CaseIterable {
-    case i, bii, ii, biii, iii, iv, bv, v, bvi, vi, bvii, vii
+    case i, bii, ii, biii, iii, iv, bv/* i.e., #IV */, v, bvi, vi, bvii, vii
     
+    // root note
     public init(of pitch: Pitch, in scale: Scale) {
         
         let modMidiNoteNumber = pitch.midiNoteNumber % 12
@@ -18,6 +19,7 @@ public enum Degree: Int, CaseIterable {
         let rawValue = mod(modMidiNoteNumber - noteValue, Degree.allCases.count)
         self.init(rawValue: rawValue)!
     }
+    
 }
 
 extension Degree: CustomStringConvertible {
