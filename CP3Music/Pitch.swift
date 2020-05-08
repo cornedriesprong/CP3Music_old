@@ -47,6 +47,7 @@ extension Pitch {
     enum Class: Int, Hashable, CustomStringConvertible {
         case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
         
+        // TODO: add flats to descriptions based on accidental
         var description: String {
             switch self {
             case .c:

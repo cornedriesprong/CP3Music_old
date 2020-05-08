@@ -8,47 +8,99 @@
 
 import Foundation
 
-public enum Degree: Int, CaseIterable {
-    case i, bii, ii, biii, iii, iv, bv/* i.e., #IV */, v, bvi, vi, bvii, vii
+public struct Degree {
     
-    // root note
-    public init(of pitch: Pitch, in scale: Scale) {
-        
-        let modMidiNoteNumber = pitch.midiNoteNumber % 12
-        let noteValue = scale.key.root.rawValue + scale.key.accidental.rawValue
-        let rawValue = mod(modMidiNoteNumber - noteValue, Degree.allCases.count)
-        self.init(rawValue: rawValue)!
+    enum Numeral: Int, CaseIterable {
+        case i
+        case bii
+        case ii
+        case biii
+        case iii
+        case iv
+        case bv /* i.e., #iv */
+        case v
+        case bvi
+        case vi
+        case bvii
+        case vii
     }
     
+    enum Quality {
+        case major, minor
+    }
+        
+    private var numeral: Numeral
+    private var quality: Quality
+    
+    public init?(chord: Chord, in scale: Scale) {
+        
+        switch chord.quality {
+        case .major:
+            self.quality = .major
+        case .minor:
+            self.quality = .minor
+        default:
+            return nil
+        }
+        
+        let noteValue = scale.key.root.rawValue + scale.key.accidental.rawValue
+        let rootMidiNoteNumber = chord.rootPitch().midiNoteNumber
+        let rawValue = mod(rootMidiNoteNumber - noteValue, Numeral.allCases.count)
+        self.numeral = Numeral(rawValue: rawValue)!
+    }
 }
 
 extension Degree: CustomStringConvertible {
     
     public var description: String {
-        switch self {
-        case .i:
+        switch (numeral, quality) {
+        case (.i, .major):
             return "I"
-        case .bii:
+        case (.i, .minor):
+            return "i"
+        case (.bii, .major):
+            return "♭II"
+        case (.bii, .minor):
             return "♭ii"
-        case .ii:
+        case (.ii, .minor):
             return "ii"
-        case .biii:
+        case (.ii, .major):
+            return "II"
+        case (.biii, .major):
+            return "♭III"
+        case (.biii, .minor):
             return "♭iii"
-        case .iii:
+        case (.iii, .major):
+            return "III"
+        case (.iii, .minor):
             return "iii"
-        case .iv:
+        case (.iv, .major):
             return "IV"
-        case .bv:
-            return "#IV"
-        case .v:
+        case (.iv, .minor):
+            return "iv"
+        case (.v, .major):
             return "V"
-        case .bvi:
+        case (.v, .minor):
+            return "v"
+        case (.bv, .major):
+            return "♭V"
+        case (.bv, .minor):
+            return "♭v"
+        case (.bvi, .major):
+            return "♭VI"
+        case (.bvi, .minor):
             return "♭vi"
-        case .vi:
+        case (.vi, .major):
+            return "VI"
+        case (.vi, .minor):
             return "vi"
-        case .bvii:
+        case (.bvii, .major):
             return "♭vii"
-        case .vii:
+        case (.bvii, .minor):
+            return "♭vii"
+        case (.vii, .major):
+            return "VII"
+        case (.vii, .minor):
             return "vii"
         }
     }

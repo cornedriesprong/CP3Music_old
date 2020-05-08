@@ -102,14 +102,22 @@ class CP3MusicTests: XCTestCase {
     
     func testScaleDegrees() {
         
-        let a = Pitch(.a, .natural, 2)
-        let aMajor = Scale(Key(.a), .major)
-        XCTAssertEqual(Degree(of: a, in: aMajor), Degree.i)
+        // I
+        let cMajorTriad = Chord(pitches: [
+            Pitch(.c, .natural, 3),
+            Pitch(.e, .natural, 3),
+            Pitch(.g, .natural, 3)
+        ])!
+        let cMajorScale = Scale(Key(.c), .major)
+        XCTAssertEqual(Degree(chord: cMajorTriad, in: cMajorScale)?.description, "I")
         
-//        let aSharp = Pitch(.a, .sharp, 2)
-        let cSharpMinor = Scale(Key(.c, .sharp), .minor)
-        print(Degree(of: a, in: cSharpMinor).description)
-//        XCTAssertEqual(degree, Degree.vii)
+        // v
+        let gMinorTriad = Chord(pitches: [
+            Pitch(.g, .natural, 3),
+            Pitch(.a, .sharp, 3),
+            Pitch(.d, .natural, 4)
+        ])!
+        XCTAssertEqual(Degree(chord: gMinorTriad, in: cMajorScale)?.description, "v")
     }
     
     func testInverseInterval() {
@@ -162,5 +170,9 @@ class CP3MusicTests: XCTestCase {
             Pitch(.a, .sharp, 4)
         ])!
         XCTAssertEqual(dSharpMinor.description, "D#m")
+        
+        let fFlat = Pitch(.f, .flat, 3)
+        let fFlatMinor = Chord(root: fFlat, quality: .minor)!
+        XCTAssertEqual(fFlatMinor.description, "Em")
     }
 }

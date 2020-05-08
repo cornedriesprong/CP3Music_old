@@ -8,10 +8,19 @@
 
 import Foundation
 
-struct Chord {
+public struct Chord {
     
-    enum Quality {
-        case major, minor, augmented, diminished, major7th, minor7th, dominant7th
+    public enum Quality {
+        case major, minor
+        
+        var intervals: [Interval] {
+            switch self {
+            case .major:
+                return [.p0, .M3, .p5]
+            case .minor:
+                return [.p0, .m3, .p5]
+            }
+        }
         
         var symbol: String {
             switch self {
@@ -19,25 +28,15 @@ struct Chord {
                 return "M"
             case .minor:
                 return "m"
-            case .diminished:
-                return "dim"
-            case .augmented:
-                return "aug"
-            case .major7th:
-                return "M7"
-            case .minor7th:
-                return "m7"
-            case .dominant7th:
-                return "7"
             }
         }
     }
     
-    let pitches: Set<Pitch>
-    let quality: Chord.Quality
+    public let pitches: Set<Pitch>
+    public let quality: Chord.Quality
     
     // NOTE: for now we only support non-inverted major and minor chords
-    init?(pitches: Set<Pitch>) {
+    public init?(pitches: Set<Pitch>) {
         
         guard pitches.count > 1 else {
             // a chord with a single note is not a chord
@@ -65,7 +64,14 @@ struct Chord {
         }
     }
     
-    func rootPitch() -> Pitch {
+    public init?(root: Pitch, quality: Quality) {
+        // build chord from root pitch
+        self.quality = quality
+        let pitchValues = quality.intervals.map { root.midiNoteNumber + $0.rawValue }
+        self.pitches = Set(pitchValues.map { Pitch(midiNoteNumber: $0) })
+    }
+    
+    public func rootPitch() -> Pitch {
         // NOTE: for now we always assume the lower pitch is the root
         pitches.sorted(by: { $0.midiNoteNumber < $1.midiNoteNumber }).first!
     }
@@ -73,7 +79,7 @@ struct Chord {
 
 extension Chord: CustomStringConvertible {
     
-    var description: String {
+    public var description: String {
         return "\(rootPitch().class.description)\(self.quality.symbol)"
     }
 }
