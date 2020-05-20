@@ -95,7 +95,7 @@ extension Degree: CustomStringConvertible {
         case (.vi, .minor):
             return "vi"
         case (.bvii, .major):
-            return "♭vii"
+            return "♭VII"
         case (.bvii, .minor):
             return "♭vii"
         case (.vii, .major):

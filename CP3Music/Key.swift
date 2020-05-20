@@ -13,6 +13,27 @@ public struct Key {
     var root: Root
     var accidental: Accidental
     
+    public var rootValue: Int {
+        return root.rawValue + accidental.rawValue
+    }
+    
+    public static var allKeys: [Key] {
+        return [
+            Key(.c),
+            Key(.c, .sharp),
+            Key(.d),
+            Key(.d, .sharp),
+            Key(.e),
+            Key(.f),
+            Key(.f, .sharp),
+            Key(.g),
+            Key(.g, .sharp),
+            Key(.a),
+            Key(.a, .sharp),
+            Key(.b)
+        ]
+    }
+    
     public init(midiNoteNumber: Int) {
         let modMidiNoteNumber = midiNoteNumber % 12
         let root = Root.allCases

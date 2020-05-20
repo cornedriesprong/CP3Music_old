@@ -10,7 +10,7 @@ import Foundation
 
 public struct Pitch: Hashable {
     
-    var midiNoteNumber: Int
+    public var midiNoteNumber: Int
     
     var octave: Int {
         return Int(floor(Float(midiNoteNumber) / 12))
@@ -44,11 +44,11 @@ public struct Pitch: Hashable {
 
 extension Pitch {
     
-    enum Class: Int, Hashable, CustomStringConvertible {
+    public enum Class: Int, Hashable, CustomStringConvertible {
         case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
         
         // TODO: add flats to descriptions based on accidental
-        var description: String {
+        public var description: String {
             switch self {
             case .c:
                 return "C"
@@ -75,6 +75,11 @@ extension Pitch {
             case .b:
                 return "B"
             }
+        }
+        
+        public init(midiNoteNumber: Int) {
+            let modPitch = mod(midiNoteNumber, 12)
+            self.init(rawValue: modPitch)!
         }
     }
 }

@@ -39,7 +39,7 @@ public enum Interval: Int {
     case P15 = 24
     case a15 = 25
     
-    func inverse() -> Interval {
+    public func inverse() -> Interval {
         
         if self.rawValue <= 12 {
             return Interval(rawValue: abs(self.rawValue - 12))!
