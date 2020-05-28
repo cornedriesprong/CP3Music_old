@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Key {
+public struct Key: Codable {
     
     var root: Root
     var accidental: Accidental
@@ -55,7 +55,7 @@ public struct Key {
 
 extension Key {
     
-    public enum Root: Int, CaseIterable, CustomStringConvertible {
+    public enum Root: Int, Codable, CaseIterable, CustomStringConvertible {
         case c = 0
         case d = 2
         case e = 4

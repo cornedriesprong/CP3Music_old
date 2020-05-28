@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Accidental: Int, CaseIterable {
+public enum Accidental: Int, Codable, CaseIterable {
     case flat = -1
     case natural = 0
     case sharp = 1

@@ -6,17 +6,17 @@
 //  Copyright © 2020 cp3.io. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct Pitch: Hashable {
     
     public var midiNoteNumber: Int
     
-    var octave: Int {
+    public var octave: Int {
         return Int(floor(Float(midiNoteNumber) / 12))
     }
     
-    var `class`: Class {
+    public var `class`: Class {
         return Class(rawValue: midiNoteNumber % 12)!
     }
     

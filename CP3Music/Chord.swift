@@ -13,7 +13,7 @@ public struct Chord {
     public enum Quality {
         case major, minor
         
-        var intervals: [Interval] {
+        public var intervals: [Interval] {
             switch self {
             case .major:
                 return [.p0, .M3, .p5]
