@@ -44,7 +44,7 @@ public struct Pitch: Hashable {
 
 extension Pitch {
     
-    public enum Class: Int, Hashable, CustomStringConvertible {
+    public enum Class: Int, Hashable, CaseIterable, CustomStringConvertible {
         case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
         
         // TODO: add flats to descriptions based on accidental
