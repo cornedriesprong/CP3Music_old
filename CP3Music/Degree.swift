@@ -10,7 +10,7 @@ import Foundation
 
 public struct Degree {
     
-    enum Numeral: Int, CaseIterable {
+    enum Numeral: Int8, CaseIterable {
         case i
         case bii
         case ii
@@ -45,7 +45,7 @@ public struct Degree {
         
         let noteValue = scale.key.root.rawValue + scale.key.accidental.rawValue
         let rootMidiNoteNumber = chord.rootPitch().midiNoteNumber
-        let rawValue = mod(rootMidiNoteNumber - noteValue, Numeral.allCases.count)
+        let rawValue = mod(rootMidiNoteNumber - noteValue, Int8(Numeral.allCases.count))
         self.numeral = Numeral(rawValue: rawValue)!
     }
 }

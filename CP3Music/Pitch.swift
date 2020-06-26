@@ -10,21 +10,21 @@ import UIKit
 
 public struct Pitch: Hashable {
     
-    public var midiNoteNumber: Int
+    public var midiNoteNumber: Int8
     
-    public var octave: Int {
-        return Int(floor(Float(midiNoteNumber) / 12))
+    public var octave: Int8 {
+        return Int8(floor(Float(midiNoteNumber) / 12))
     }
     
     public var `class`: Class {
         return Class(rawValue: midiNoteNumber % 12)!
     }
     
-    public init(midiNoteNumber: Int) {
+    public init(midiNoteNumber: Int8) {
         self.midiNoteNumber = midiNoteNumber
     }
     
-    init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int) {
+    init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int8) {
         self.midiNoteNumber = `class`.rawValue + accidental.rawValue + octave * 12
     }
     
@@ -44,7 +44,7 @@ public struct Pitch: Hashable {
 
 extension Pitch {
     
-    public enum Class: Int, Hashable, CaseIterable, CustomStringConvertible {
+    public enum Class: Int8, Hashable, CaseIterable, CustomStringConvertible {
         case c, cs, d, ds, e, f, fs, g, gs, a, `as`, b
         
         // TODO: add flats to descriptions based on accidental
@@ -77,7 +77,7 @@ extension Pitch {
             }
         }
         
-        public init(midiNoteNumber: Int) {
+        public init(midiNoteNumber: Int8) {
             let modPitch = mod(midiNoteNumber, 12)
             self.init(rawValue: modPitch)!
         }

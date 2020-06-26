@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum Interval: Int {
+public enum Interval: Int8 {
     // simple
     case p0 = 0
     case m2 = 1

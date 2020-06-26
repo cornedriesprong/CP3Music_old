@@ -13,7 +13,7 @@ public struct Key: Codable {
     var root: Root
     var accidental: Accidental
     
-    public var rootValue: Int {
+    public var rootValue: Int8 {
         return root.rawValue + accidental.rawValue
     }
     
@@ -34,7 +34,7 @@ public struct Key: Codable {
         ]
     }
     
-    public init(midiNoteNumber: Int) {
+    public init(midiNoteNumber: Int8) {
         let modMidiNoteNumber = midiNoteNumber % 12
         let root = Root.allCases
             .sorted(by: { $0.rawValue > $1.rawValue })
@@ -55,7 +55,7 @@ public struct Key: Codable {
 
 extension Key {
     
-    public enum Root: Int, Codable, CaseIterable, CustomStringConvertible {
+    public enum Root: Int8, Codable, CaseIterable, CustomStringConvertible {
         case c = 0
         case d = 2
         case e = 4
