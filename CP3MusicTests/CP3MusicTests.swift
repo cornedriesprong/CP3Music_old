@@ -128,8 +128,8 @@ class CP3MusicTests: XCTestCase {
         XCTAssertEqual(Interval.m3.inverse(), .M6)
         XCTAssertEqual(Interval.M6.inverse(), .m3)
         XCTAssertEqual(Interval.M7.inverse(), .m2)
-        XCTAssertEqual(Interval.p12.inverse(), .p5)
-        XCTAssertEqual(Interval.a15.inverse(), .m9)
+        XCTAssertEqual(Interval.p12.inverse(), .p4)
+        XCTAssertEqual(Interval.a15.inverse(), .m2)
     }
     
     func testInterval() {
