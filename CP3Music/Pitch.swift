@@ -83,3 +83,11 @@ extension Pitch {
         }
     }
 }
+
+extension Pitch: CustomStringConvertible {
+    
+    public var description: String {
+        let octaveNumber = Int(floor(Double(midiNoteNumber) / 12.0))
+        return "\(self.class.description)\(octaveNumber)"
+    }
+}
