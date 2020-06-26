@@ -11,7 +11,7 @@ import Foundation
 public class Note {
     
     public var pitch: Pitch
-    public var velocity: Int
+    public var velocity: Int8
     public var startTime: UInt64
     public var endTime: UInt64?
     
@@ -21,7 +21,7 @@ public class Note {
         return Double(hostTicks) * ticksToSeconds
     }
     
-    public init(pitch: Pitch, velocity: Int) {
+    public init(pitch: Pitch, velocity: Int8) {
         self.pitch = pitch
         self.velocity = velocity
         self.startTime = mach_absolute_time()
