@@ -13,7 +13,7 @@ public struct Scale {
     let key: Key
     let quality: Scale.Mode
     
-    var pitches: [Pitch.Class] {
+    public var pitches: [Pitch.Class] {
         
         return quality.intervals.compactMap { interval in
             let rawValue = mod(key.root.rawValue + interval.rawValue + key.accidental.rawValue, 12)
@@ -21,7 +21,7 @@ public struct Scale {
         }
     }
     
-    var relative: [Scale] {
+    public var relative: [Scale] {
         
         // iterate over all qualities except current one
         let qualities = Set(Scale.Mode.allCases).subtracting([quality])
@@ -43,7 +43,7 @@ public struct Scale {
         return scales
     }
     
-    var parallel: Scale? {
+    public var parallel: Scale? {
         switch quality {
         case .major:
             return Scale(key, .minor)
