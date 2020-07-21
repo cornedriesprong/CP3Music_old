@@ -39,8 +39,6 @@ public struct Degree {
             self.quality = .major
         case .minor:
             self.quality = .minor
-        default:
-            return nil
         }
         
         let noteValue = scale.key.root.rawValue + scale.key.accidental.rawValue

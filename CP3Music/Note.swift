@@ -34,10 +34,11 @@ public class Note {
 
 extension Note: Hashable {
     
-    
-    
-    public var hashValue: Int {
-        return ObjectIdentifier(self).hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(pitch)
+        hasher.combine(velocity)
+        hasher.combine(startTime)
+        hasher.combine(endTime)
     }
 }
 
