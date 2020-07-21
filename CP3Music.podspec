@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.authors            = { 'Corné Driesprong' => 'corne@cp3.io' }
   s.license            = { :type => 'MIT', :text => license }
   s.source             = { :git => 'https://github.com/cornedriesprong/CP3Music.git', :tag => s.version.to_s }
-  s.source_files       = 'CP3Music/**/*'
+  s.source_files       = 'CP3Music/**/*.swift'
   s.ios.deployment_target = '11.0'
+  s.swift_version = '5.0'
   s.frameworks = 'Foundation'
 end
