@@ -37,7 +37,6 @@
 		9744B55E2477FAE4005D948B /* CP3_UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CP3_UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BE3FA2402BEA700043AB4 /* CP3Music.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CP3Music.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BE3FD2402BEA700043AB4 /* CP3Music.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CP3Music.h; sourceTree = "<group>"; };
-		977BE3FE2402BEA700043AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977BE4032402BEA700043AB4 /* CP3MusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CP3MusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BE4082402BEA700043AB4 /* CP3MusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CP3MusicTests.swift; sourceTree = "<group>"; };
 		977BE40A2402BEA700043AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 				977BE4202402CE6C00043AB4 /* Pitch.swift */,
 				9744B55B2477FA2C005D948B /* Note.swift */,
 				97E08A5A2465663E00319031 /* Helpers */,
-				977BE3FE2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3Music;
 			sourceTree = "<group>";
