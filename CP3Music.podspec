@@ -6,12 +6,12 @@ END
 
 Pod::Spec.new do |s|
   s.name               = 'CP3Music'
-  s.version            = '1.0.1'
+  s.version            = '1.0'
   s.summary            = 'A music theory library in Swift'
   s.homepage           = 'https://github.com/cornedriesprong/CP3Music'
   s.authors            = { 'Corné Driesprong' => 'corne@cp3.io' }
   s.license            = { :type => 'MIT', :text => license }
-  s.source             = { :git => 'https://github.com/cornedriesprong/CP3Music.git', :tag => s.version.to_s }
+  s.source             = { :git => 'https://github.com/cornedriesprong/CP3Music.git', :branch => 'master' }
   s.source_files       = 'CP3Music/**/*.swift'
   s.ios.deployment_target = '11.0'
   s.swift_version      = '5.0'

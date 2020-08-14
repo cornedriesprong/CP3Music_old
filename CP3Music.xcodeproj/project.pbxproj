@@ -29,6 +29,13 @@
 			remoteGlobalIDString = 977BE3F92402BEA700043AB4;
 			remoteInfo = CP3Music;
 		};
+		97D3CC1A24CC845D00478D99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97D3CC1624CC845D00478D99 /* RealtimeWatchdog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C636E311D0D878B005A380B;
+			remoteInfo = RealtimeWatchdog;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,7 @@
 		977BE41E2402CE5E00043AB4 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		977BE4202402CE6C00043AB4 /* Pitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		977BE4232402D90700043AB4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		97D3CC1624CC845D00478D99 /* RealtimeWatchdog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RealtimeWatchdog.xcodeproj; path = ../_downloads/RealtimeWatchdog/RealtimeWatchdog.xcodeproj; sourceTree = "<group>"; };
 		97E08A5B246567C100319031 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +87,7 @@
 		977BE3F02402BEA700043AB4 = {
 			isa = PBXGroup;
 			children = (
+				97D3CC1624CC845D00478D99 /* RealtimeWatchdog.xcodeproj */,
 				977BE3FC2402BEA700043AB4 /* CP3Music */,
 				977BE4072402BEA700043AB4 /* CP3MusicTests */,
 				977BE3FB2402BEA700043AB4 /* Products */,
@@ -119,6 +128,14 @@
 				977BE40A2402BEA700043AB4 /* Info.plist */,
 			);
 			path = CP3MusicTests;
+			sourceTree = "<group>";
+		};
+		97D3CC1724CC845D00478D99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97D3CC1B24CC845D00478D99 /* libRealtimeWatchdog.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		97E08A5A2465663E00319031 /* Helpers */ = {
@@ -209,6 +226,12 @@
 			mainGroup = 977BE3F02402BEA700043AB4;
 			productRefGroup = 977BE3FB2402BEA700043AB4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 97D3CC1724CC845D00478D99 /* Products */;
+					ProjectRef = 97D3CC1624CC845D00478D99 /* RealtimeWatchdog.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				977BE3F92402BEA700043AB4 /* CP3Music */,
@@ -216,6 +239,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		97D3CC1B24CC845D00478D99 /* libRealtimeWatchdog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRealtimeWatchdog.a;
+			remoteRef = 97D3CC1A24CC845D00478D99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		977BE3F82402BEA700043AB4 /* Resources */ = {
