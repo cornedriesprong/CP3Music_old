@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum NoteValue {
+public enum NoteValue: Int, CaseIterable {
     
     // define a fake class to reference the bundle to, for showing images
     class SpoofClass {}
@@ -26,6 +26,37 @@ public enum NoteValue {
     case dottedSixteenthNote
     case sixteenthNote
     case sixteenthNoteTriplet
+    
+    public var clockDivision: Float {
+        switch self {
+        case .wholeNote:
+            return 1.0
+        case .dottedHalfNote:
+            return 1.0 / 1.5
+        case .halfNote:
+            return 1.0 / 2.0
+        case .halfNoteTriplet:
+            return 1.0 / 3.0
+        case .dottedQuarterNote:
+            return 1.0 / 4.0
+        case .quarterNote:
+            return 1.0 / 4.0
+        case .quarterNoteTriplet:
+            return 1.0 / 6.0
+        case .dottedEighthNote:
+            return 1.0 / 7.0
+        case .eighthNote:
+            return 1.0 / 8.0
+        case .eighthNoteTriplet:
+            return 1.0 / 10.0
+        case .dottedSixteenthNote:
+            return 1.0 / 16.0
+        case .sixteenthNote:
+            return 1.0 / 16.0
+        case .sixteenthNoteTriplet:
+            return 1.0 / 20.0
+        }
+    }
     
     public var image: UIImage? {
         let bundle = Bundle(for: SpoofClass.self)
