@@ -1,5 +1,5 @@
 //
-//  NoteValues.swift
+//  NoteValue.swift
 //  CP3Music
 //
 //  Created by Corné on 13/02/2021.
