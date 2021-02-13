@@ -18,6 +18,8 @@
 		977BE4212402CE6C00043AB4 /* Pitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4202402CE6C00043AB4 /* Pitch.swift */; };
 		977BE4242402D90700043AB4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4232402D90700043AB4 /* Helpers.swift */; };
 		97A7E26B2402F54200B5CFE3 /* CP3MusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BE4082402BEA700043AB4 /* CP3MusicTests.swift */; };
+		97DBA6E325D813BD00BA12AF /* NoteValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBA6E225D813BC00BA12AF /* NoteValues.swift */; };
+		97DBA6EB25D8164700BA12AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBA6EA25D8164700BA12AF /* Assets.xcassets */; };
 		97E08A5C246567C100319031 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E08A5B246567C100319031 /* Chord.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		977BE41E2402CE5E00043AB4 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		977BE4202402CE6C00043AB4 /* Pitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch.swift; sourceTree = "<group>"; };
 		977BE4232402D90700043AB4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		97DBA6E225D813BC00BA12AF /* NoteValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteValues.swift; sourceTree = "<group>"; };
+		97DBA6EA25D8164700BA12AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97E08A5B246567C100319031 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +111,9 @@
 				97E08A5B246567C100319031 /* Chord.swift */,
 				977BE4202402CE6C00043AB4 /* Pitch.swift */,
 				9744B55B2477FA2C005D948B /* Note.swift */,
+				97DBA6E225D813BC00BA12AF /* NoteValues.swift */,
 				97E08A5A2465663E00319031 /* Helpers */,
+				97DBA6EA25D8164700BA12AF /* Assets.xcassets */,
 			);
 			path = CP3Music;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97DBA6EB25D8164700BA12AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +253,7 @@
 				977BE41F2402CE5E00043AB4 /* Scale.swift in Sources */,
 				9744B55C2477FA2C005D948B /* Note.swift in Sources */,
 				977BE4152402BEB200043AB4 /* Key.swift in Sources */,
+				97DBA6E325D813BD00BA12AF /* NoteValues.swift in Sources */,
 				97E08A5C246567C100319031 /* Chord.swift in Sources */,
 				977BE4242402D90700043AB4 /* Helpers.swift in Sources */,
 			);
