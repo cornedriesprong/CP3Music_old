@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum NoteValue: Int, CaseIterable {
+public enum NoteValue: Int, Codable, CaseIterable {
     
     // define a fake class to reference the bundle to, for showing images
     class SpoofClass {}
@@ -36,58 +36,54 @@ public enum NoteValue: Int, CaseIterable {
     case sixtyFourthNote
     case sixtyFourthNoteTriplet
     
-    public var stepDuration: Float {
-        
-        let value: Float
+    public var duration: Float {
         
         switch self {
         case .doubleWholeNote:
-            value = NoteValue.wholeNote.stepDuration * 2.0
+            return NoteValue.wholeNote.duration * 2.0
         case .dottedWholeNote:
-            value = NoteValue.wholeNote.stepDuration * 1.5
+            return NoteValue.wholeNote.duration * 1.5
         case .wholeNote:
-            value = 1.0
+            return 1.0
         case .wholeNoteTriplet:
-            value = NoteValue.doubleWholeNote.stepDuration / 3.0
+            return NoteValue.doubleWholeNote.duration / 3.0
         case .dottedHalfNote:
-            value = NoteValue.halfNote.stepDuration * 1.5
+            return NoteValue.halfNote.duration * 1.5
         case .halfNote:
-            value = NoteValue.wholeNote.stepDuration / 2.0
+            return NoteValue.wholeNote.duration / 2.0
         case .halfNoteTriplet:
-            value = NoteValue.wholeNote.stepDuration / 3.0
+            return NoteValue.wholeNote.duration / 3.0
         case .dottedQuarterNote:
-            value = NoteValue.quarterNote.stepDuration * 1.5
+            return NoteValue.quarterNote.duration * 1.5
         case .quarterNote:
-            value = NoteValue.wholeNote.stepDuration / 4.0
+            return NoteValue.wholeNote.duration / 4.0
         case .quarterNoteTriplet:
-            value = NoteValue.halfNote.stepDuration / 3.0
+            return NoteValue.halfNote.duration / 3.0
         case .dottedEighthNote:
-            value = NoteValue.eighthNote.stepDuration * 1.5
+            return NoteValue.eighthNote.duration * 1.5
         case .eighthNote:
-            value = NoteValue.wholeNote.stepDuration / 8.0
+            return NoteValue.wholeNote.duration / 8.0
         case .eighthNoteTriplet:
-            value = NoteValue.quarterNote.stepDuration / 3.0
+            return NoteValue.quarterNote.duration / 3.0
         case .dottedSixteenthNote:
-            value = NoteValue.sixteenthNote.stepDuration * 1.5
+            return NoteValue.sixteenthNote.duration * 1.5
         case .sixteenthNote:
-            value = NoteValue.wholeNote.stepDuration / 16.0
+            return NoteValue.wholeNote.duration / 16.0
         case .sixteenthNoteTriplet:
-            value = NoteValue.eighthNote.stepDuration / 3.0
+            return NoteValue.eighthNote.duration / 3.0
         case .dottedThirthySecondNote:
-            value = NoteValue.thirthySecondNote.stepDuration * 1.5
+            return NoteValue.thirthySecondNote.duration * 1.5
         case .thirthySecondNote:
-            value = NoteValue.wholeNote.stepDuration / 32.0
+            return NoteValue.wholeNote.duration / 32.0
         case .thirthySecondNoteTriplet:
-            value = NoteValue.sixteenthNote.stepDuration / 3.0
+            return NoteValue.sixteenthNote.duration / 3.0
         case .dottedSixtyFourthNote:
-            value = NoteValue.sixtyFourthNote.stepDuration * 1.5
+            return NoteValue.sixtyFourthNote.duration * 1.5
         case .sixtyFourthNote:
-            value = NoteValue.wholeNote.stepDuration / 64.0
+            return NoteValue.wholeNote.duration / 64.0
         case .sixtyFourthNoteTriplet:
-            value = NoteValue.thirthySecondNote.stepDuration / 3.0
+            return NoteValue.thirthySecondNote.duration / 3.0
         }
-        
-        return value * 16.0
     }
     
     public var image: UIImage? {
