@@ -10,8 +10,8 @@ import Foundation
 
 public struct Scale {
     
-    let key: Key
-    let quality: Scale.Mode
+    public let key: Key
+    public let quality: Scale.Mode
     
     public var pitches: [Pitch.Class] {
         
@@ -126,6 +126,6 @@ extension Scale: Equatable {
 extension Scale: CustomStringConvertible {
     
     public var description: String {
-        return "\(key.root.description)\(key.accidental.description)\(quality.description)"
+        return "\(key.root.description)\(key.accidental.description) \(quality.description)"
     }
 }
