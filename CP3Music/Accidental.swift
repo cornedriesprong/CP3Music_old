@@ -21,7 +21,7 @@ extension Accidental: CustomStringConvertible {
         case .flat:
             return "♭"
         case .natural:
-            return "♮"
+            return ""
         case .sharp:
             return "♯"
         }

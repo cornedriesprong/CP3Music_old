@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Note {
+public struct Note {
     
     public var pitch: Pitch
     public var velocity: Int8
@@ -27,7 +27,7 @@ public class Note {
         self.startTime = mach_absolute_time()
     }
     
-    public func stop() {
+    public mutating func stop() {
         self.endTime = mach_absolute_time()
     }
 }
@@ -38,7 +38,6 @@ extension Note: Hashable {
         hasher.combine(pitch)
         hasher.combine(velocity)
         hasher.combine(startTime)
-        hasher.combine(endTime)
     }
 }
 
