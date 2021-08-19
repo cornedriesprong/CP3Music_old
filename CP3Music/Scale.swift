@@ -65,6 +65,7 @@ extension Scale {
     public enum Mode: Int, CaseIterable, Codable {
         case major,
         minor,
+        chromatic,
         pentatonic,
         dorian,
         phrygrian,
@@ -78,6 +79,8 @@ extension Scale {
                 return [.p0, .M2, .M3, .p4, .p5, .M6, .M7]
             case .minor:
                 return [.p0, .M2, .m3, .p4, .p5, .m6, .m7]
+            case .chromatic:
+                return [.p0, .m2, .M2, .m3, .M3, .p4, .a4_d5, .p5, .m6, .M6, .m7, .M7]
             case .pentatonic:
                 return [.p0, .M3, .p4, .p5, .M6]
             case .dorian:
@@ -99,6 +102,8 @@ extension Scale {
                 return "Ionian (Major)"
             case .minor:
                 return "Aeolian (Minor)"
+            case .chromatic:
+                return "Chromatic"
             case .pentatonic:
                 return "Pentatonic"
             case .dorian:
