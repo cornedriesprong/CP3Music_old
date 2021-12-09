@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Scale {
+public struct Scale: Codable {
     
     public let key: Key
     public let quality: Scale.Mode
