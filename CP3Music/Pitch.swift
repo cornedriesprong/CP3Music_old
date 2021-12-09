@@ -24,7 +24,7 @@ public struct Pitch: Hashable {
         self.midiNoteNumber = midiNoteNumber
     }
     
-    init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int8) {
+    public init(_ class: Class, _ accidental: Accidental = .natural, _ octave: Int8) {
         self.midiNoteNumber = `class`.rawValue + accidental.rawValue + octave * 12
     }
     
