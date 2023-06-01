@@ -16,9 +16,9 @@ public struct Chord {
         public var intervals: [Interval] {
             switch self {
             case .major:
-                return [.p0, .M3, .p5]
+                return [.P0, .M3, .P5]
             case .minor:
-                return [.p0, .m3, .p5]
+                return [.P0, .m3, .P5]
             }
         }
         

@@ -76,23 +76,23 @@ extension Scale {
         public var intervals: [Interval] {
             switch self {
             case .major:
-                return [.p0, .M2, .M3, .p4, .p5, .M6, .M7]
+                return [.P0, .M2, .M3, .P4, .P5, .M6, .M7]
             case .minor:
-                return [.p0, .M2, .m3, .p4, .p5, .m6, .m7]
+                return [.P0, .M2, .m3, .P4, .P5, .m6, .m7]
             case .chromatic:
-                return [.p0, .m2, .M2, .m3, .M3, .p4, .a4_d5, .p5, .m6, .M6, .m7, .M7]
+                return [.P0, .m2, .M2, .m3, .M3, .P4, .a4_d5, .P5, .m6, .M6, .m7, .M7]
             case .pentatonic:
-                return [.p0, .M3, .p4, .p5, .M6]
+                return [.P0, .M3, .P4, .P5, .M6]
             case .dorian:
-                return [.p0, .M2, .m3, .p4, .p5, .M6, .m7]
+                return [.P0, .M2, .m3, .P4, .P5, .M6, .m7]
             case .phrygrian:
-                return [.p0, .m2, .m3, .p4, .p5, .m6, .m7]
+                return [.P0, .m2, .m3, .P4, .P5, .m6, .m7]
             case .lydian:
-                return [.p0, .M2, .M3, .a4_d5, .p5, .M6, .M7]
+                return [.P0, .M2, .M3, .a4_d5, .P5, .M6, .M7]
             case .mixolydian:
-                return [.p0, .M2, .M3, .p4, .p5, .M6, .m7]
+                return [.P0, .M2, .M3, .P4, .P5, .M6, .m7]
             case .locrian:
-                return [.p0, .m2, .m3, .p4, .a4_d5, .m6, .m7]
+                return [.P0, .m2, .m3, .P4, .a4_d5, .m6, .m7]
             }
         }
         
