@@ -64,8 +64,16 @@ public struct Chord {
         }
     }
     
-    public init?(root: Pitch, quality: Quality) {
+    public init(root: Pitch, quality: Quality = .major) {
         // build chord from root pitch
+        self.quality = quality
+        let pitchValues = quality.intervals.map { root.midiNoteNumber + $0.rawValue }
+        self.pitches = Set(pitchValues.map { Pitch(midiNoteNumber: $0) })
+    }
+    
+    public init(pitchClass: Pitch.Class, quality: Quality = .major) {
+        // build chord from root pitch
+        let root = Pitch(pitchClass, .natural, 4)
         self.quality = quality
         let pitchValues = quality.intervals.map { root.midiNoteNumber + $0.rawValue }
         self.pitches = Set(pitchValues.map { Pitch(midiNoteNumber: $0) })
